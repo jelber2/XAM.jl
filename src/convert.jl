@@ -89,7 +89,7 @@ module Conversion
         bam_record.mapq = SAM.mappingquality(record)
         bam_record.bin = bin
         bam_record.n_cigar_op = n_cigar_op
-        bam_record.flag = SAM.flag(record)
+        bam_record.flags = SAM.flags(record)
         bam_record.l_seq = SAM.hassequence(record) ? SAM.seqlength(record) : 0
         bam_record.next_refid = refname_to_refid(get_nextrefname(record), header)
         bam_record.next_pos = SAM.nextposition(record)-1
